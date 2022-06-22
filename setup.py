@@ -8,7 +8,7 @@ except ImportError:
 
 setup(
   name = 'pyworldzipcode',
-  version = '0.1.9',
+  version = '0.1.10',
   author = 'Dalwinder singh',
   author_email = 'dalwindr@gmail.com',
   description = "infer geo location name using postal code",
