@@ -28,19 +28,21 @@ class WorldPostalSearch(object):
     #
     # def break_data(self):
     #   df = self.df
-    #   for i in val_countries:
+    #   df["postal_code"] = df["postal_code"].astype(str)
+    #   df["country_code"] = df["country_code"].astype(str)
+    #   df["admin_code1"] = df["admin_code1"].astype(str)
+    #   df["admin_name1"] = df["admin_name1"].astype(str)
+    #   df["admin_name2"] = df["admin_name2"].astype(str)
+    #   df["admin_name3"] = df["admin_name3"].astype(str)
+    #   df["place_name"] = df["place_name"].astype(str)
+    #   print(df.shape,df["country_code"].unique)
+    #
+    #   for i in df["country_code"].unique():
     #       print(i)
-    #       df["postal_code"]= df["postal_code"].astype(str)
-    #       df["country_code"] = df["country_code"].astype(str)
-    #       df["admin_code1"] = df["admin_code1"].astype(str)
-    #       df["admin_name1"] = df["admin_name1"].astype(str)
-    #       df["admin_name2"] = df["admin_name2"].astype(str)
-    #       df["admin_name3"] = df["admin_name3"].astype(str)
-    #       df["place_name"] = df["place_name"].astype(str)
-    #       df = df[df["country_code"] == i]
-    #       df.to_csv(current_path + "/"+i+".zcsv",compression="zip", index=False)
-    #       df = self.getdf([i])
-    #       print(df.columns)
+    #
+    #       df1 = df[df["country_code"] == i]
+    #       df1.to_csv(current_path + "/"+i+".zcsv",compression="zip", index=False)
+    #       print(df1.shape)
 
     def valid_countries(self):
         return val_countries
@@ -104,5 +106,5 @@ class WorldPostalSearch(object):
 #
 # print(WorldPostalSearch()._get("AD100", "AD"))
 # print(WorldPostalSearch().bulkget([("AD100", "AD")]))
-
+# WorldPostalSearch().break_data()
 
