@@ -8,7 +8,7 @@ except ImportError:
 
 setup(
   name = 'pyworldzipcode',
-  version = '0.1.8',
+  version = '0.1.9',
   author = 'Dalwinder singh',
   author_email = 'dalwindr@gmail.com',
   description = "infer geo location name using postal code",
@@ -19,9 +19,9 @@ setup(
   ],
   ### adding package data to it
   packages=find_packages(exclude=['contrib', 'docs']),
-  # package_data={
-  #     'assets': ['*.json'],
-  # },
+  package_data={
+      'pyworldzipcode': ['*.zcsv'],
+  },
 
   download_url = 'https://github.com/dalwindr/worldpostalcode.git/tarball/0.1.0',
   classifiers = [

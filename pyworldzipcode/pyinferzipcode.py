@@ -3,12 +3,15 @@
 # git filter-branch -f  --index-filter "git rm --cached --ignore-unmatch pyzipcode/allCountries.txt"
 # git filter-branch -f --index-filter "git rm --cached --ignore-unmatch fixtures/11_user_answer.json"
 # GB is delivery is pending
+# git prune -n | git cat-file -p 9cc84ea9b4d95453215d0c26489d6a78694e0bc6
+# py -m pip install --upgrade build;py -m build;py -m twine upload --repository testpypi dist/*;
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/
 import pandas as pd
 from typing import Union
 import os
 current_path = os.path.dirname(os.path.realpath(__file__))
 
-__version__ = "0.1.0"
+__version__ = "0.1.9"
 __author__ = "Dalwinder singh"
 
 val_countries = ["AD", "AR", "AS", "AT", "AU", "AX", "AZ", "BD", "BE", "BG", "BM", "BR", "BY", "CA", "CH", "CL", "CO",
