@@ -55,7 +55,7 @@ class WorldPostalSearch(object):
         df_list = []
         for i in countries:
             if i in val_countries:
-                df_i = pd.read_csv(current_path + "/" + i + ".zcsv", compression="zip")
+                df_i = pd.read_csv(current_path + "/" + i + ".zcsv", compression="zip", dtype=str)#.replace(pd.NA, None)
 
                 df_i["postal_code"] = df_i["postal_code"].astype(str)
                 df_i["country_code"] = df_i["country_code"].astype(str)
@@ -81,7 +81,7 @@ class WorldPostalSearch(object):
         if df.empty:
             return [{}]
         else:
-            df.columns = ["postal_code", "country_code", "state_code", "state_name", "admin_name2",
+            df.columns = ["postal_code", "country_code",  "state_name", "state_code", "admin_name2",
                           "admin_name3", "place_name"]
         return df.to_dict("records")
 
@@ -98,7 +98,7 @@ class WorldPostalSearch(object):
         if df.empty:
             return [{}]
         else:
-            df.columns = ["postal_code", "country_code", "state_code", "state_name", "admin_name2",
+            df.columns = ["postal_code", "country_code", "state_name", "state_code", "admin_name2",
                          "admin_name3", "place_name"]
             return df.to_dict("records")
 
